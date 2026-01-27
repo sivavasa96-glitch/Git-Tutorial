@@ -11,7 +11,7 @@ Eg: SVN(SubVersion)
 Distributred Version Controlling:
 -----------------------------------
 	Here a local repository is installed on every developers machine where version controlling happens at the level of the individual developer.
-  Later from the LR the code is uploaded to the remote repository. where version controlling happens at the level of thecomplete team.
+  Later from the LR the code is uploaded to the remote repository. where version controlling happens at the level of the complete team.
 
 
 Installing git on windows:
