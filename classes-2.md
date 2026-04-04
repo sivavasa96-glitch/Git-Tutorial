@@ -13,8 +13,7 @@ sections.
 Working directory:
 --------------------
 
-	Initially all the files created by the developers are stroed in a folder called working directory and these files are initially called
-untracked files.
+	Initially all the files created by the developers are stroed in a folder called working directory and these files are initially called  untracked files.
 
 Stagging Area:
 ---------------
