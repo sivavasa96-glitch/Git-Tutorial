@@ -23,8 +23,7 @@ Stagging Area:
 Local Repository :
 ------------------
 
-	All files from stagging area will be move into the local repository and this is where version controlling happens.
-    These files are called commited files
+	All files from stagging area will be move into the local repository and this is where version controlling happens. These files are called commited files
 
 1 To initilise the working dir to accept git commands
 
@@ -50,48 +49,54 @@ Local Repository :
 
 3 To unstage files ie bring files back from stagging to untracked section
 
-  git rm --cached filename
+   git rm --cached filename
+
   (or)
-  git reset filename
+
+   git reset filename
 
 4 To send files from stagging to local repository
 
-  git commit -m "Some commit message"
+   git commit -m "Some commit message"
 
 5 To see the status of the untracked and stagging section
 
-  git status
+   git status
 
 6 To see the total commits that are done in LR
 
-  git log
+   git log
 
 To see the commit history in a simplified format
 
-  git log --oneline
+   git log --oneline
 
 
 .gitignore:
 -------------
+
 This is a special file where we can store the private filenames.Any filename that is mentioned in .gitignore will not longer be accessed by git
 
 1 Create few files
-  touch file1 file2 file3 file4
+   touch file1 file2 file3 file4
 
 2 Check the status of git
-  git status
-  It will show all the above 4 files as untracked file
+   git status
+   It will show all the above 4 files as untracked file
 
 3 Create a hidden file .gitignore and enter the above filenames
-  cat > .gitignore
-  file1
-  file2
-  file3
-  file4
+
+   cat > .gitignore
+   file1
+   file2
+    file3
+   file4
+
   To come out of cat command press ctrl+d (EOF)
 
 4 Check the status of git
+
   git status
-  It will not longer show the above created four files
-  as untracked
+
+    It will not longer show the above created four files as untracked
 
