@@ -39,14 +39,14 @@ Installing git on a Linux(Ubuntu):
     sudo apt-get install -y git
 
 To check the version of git
-  git --verion
+    git --verion
 
 Setting username and email globally for all users
 
-  git config --global user.name "sai krishna"
+    git config --global user.name "sai krishna"
 
-  git config --global user.email "sai@gmail.com"
+    git config --global user.email "sai@gmail.com"
 
 To see the list of all default configuration
 
-  git config --global --list
+   git config --global --list
