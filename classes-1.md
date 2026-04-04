@@ -1,12 +1,13 @@
 
 VCS's are of two types
-1 Centralised Version Controlling
-2 Distributred Version Controlling
+
+  1 Centralised Version Controlling
+  2 Distributred Version Controlling
 
 Centralised Version Controlling:
 ---------------------------------
 	Here we have a remote server where version controlling happens.All the developers checkin theircode into this central server.
-Eg: SVN(SubVersion)
+  Eg: SVN(SubVersion)
 
 Distributred Version Controlling:
 -----------------------------------
@@ -16,24 +17,24 @@ Distributred Version Controlling:
 
 Installing git on windows:
 =============================
-1 Open https://git-scm.com/downloads
-2 Download git for windows--->Install it
-3 Open git bash
-4 Execute the git commands
+  1 Open https://git-scm.com/downloads
+  2 Download git for windows--->Install it
+  3 Open git bash
+  4 Execute the git commands
 
 Installing git on a Linux(Ubuntu):
 ======================================
-1 Update the apt-repository
+  1 Update the apt-repository
   sudo apt-get update
-2 Install git
+  2 Install git
   sudo apt-get install -y git
 
 To check the version of git
-git --verion
+  git --verion
 
 Setting username and email globally for all users
-git config --global user.name "sai krishna"
-git config --global user.email "sai@gmail.com"
+  git config --global user.name "sai krishna"
+  git config --global user.email "sai@gmail.com"
 
 To see the list of all default configuration
-git config --global --list
+  git config --global --list
