@@ -2,6 +2,7 @@
 VCS's are of two types
 
   1 Centralised Version Controlling
+  
   2 Distributred Version Controlling
 
 Centralised Version Controlling:
@@ -39,6 +40,7 @@ Installing git on a Linux(Ubuntu):
     sudo apt-get install -y git
 
 To check the version of git
+
     git --verion
 
 Setting username and email globally for all users
