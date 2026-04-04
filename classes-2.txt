@@ -4,6 +4,8 @@ sections.
 2 Stagging Area
 3 Local Repository
 
+d:\1_diRLm1S5hkVoh5qeArND0Q.webp
+
 Working directory:
 --------------------
 	Initially all the files created by the developers are stroed in a folder called working directory and these files are initially called
