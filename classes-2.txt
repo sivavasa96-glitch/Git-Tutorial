@@ -4,7 +4,8 @@ sections.
 2 Stagging Area
 3 Local Repository
 
-d:\1_diRLm1S5hkVoh5qeArND0Q.webp
+
+https://stopbyte.com/t/what-is-git-how-to-use-git/994
 
 Working directory:
 --------------------
