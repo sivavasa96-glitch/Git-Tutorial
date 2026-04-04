@@ -13,6 +13,7 @@ Centralised Version Controlling:
 Distributred Version Controlling:
 -----------------------------------
 	Here a local repository is installed on every developers machine where version controlling happens at the level of the individual developer.
+
   Later from the LR the code is uploaded to the remote repository. where version controlling happens at the level of the complete team.
 
 
@@ -28,8 +29,10 @@ Installing git on windows:
 
 Installing git on a Linux(Ubuntu):
 ======================================
+
   1 Update the apt-repository
     sudo apt-get update
+    
   2 Install git
     sudo apt-get install -y git
 
