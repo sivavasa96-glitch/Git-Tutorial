@@ -31,17 +31,22 @@ Installing git on a Linux(Ubuntu):
 ======================================
 
   1 Update the apt-repository
+
     sudo apt-get update
-    
+
   2 Install git
+
     sudo apt-get install -y git
 
 To check the version of git
   git --verion
 
 Setting username and email globally for all users
+
   git config --global user.name "sai krishna"
+
   git config --global user.email "sai@gmail.com"
 
 To see the list of all default configuration
+
   git config --global --list
