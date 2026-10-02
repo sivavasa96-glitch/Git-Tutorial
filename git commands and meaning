@@ -1,0 +1,286 @@
+Absolutely. Here is a step-by-step Git command list with simple meanings, especially useful for DevOps interviews.
+1. Configure Git
+
+Set your name
+
+git config --global user.name "Your Name"
+Set your email:
+git config --global user.email "you@example.com"
+Check configuration:
+git config --list
+Meaning: Tells Git who is creating the commits.
+
+2. Create / Download a Repository
+git init
+git init
+Meaning: Creates a new Git repository in your current directory.
+git clone
+git clone <repository-url>
+Meaning: Downloads an existing remote repository to your local machine.
+
+3. Check Repository Status
+git status
+Meaning: Shows modified, untracked, and staged files.
+This is one of the most commonly used Git commands.
+
+4. Working Directory → Staging Area
+Suppose you modify:
+main.tf
+variables.tf
+Check:
+git status
+git add
+git add main.tf
+Meaning: Moves main.tf from the working directory to the staging area.
+To stage everything:
+git add .
+Flow:
+Working Directory
+       |
+       | git add
+       ↓
+Staging Area
+
+5. Commit Changes
+git commit -m "Added EC2 Terraform configuration"
+Meaning: Saves the staged changes into your local Git repository.
+Flow:
+Working Directory
+       ↓ git add
+Staging Area
+       ↓ git commit
+Local Repository
+
+6. View Commit History
+git log
+Meaning: Shows commit history.
+Short format:
+git log --oneline
+Example:
+a1b2c3d Added EC2 instance
+d4e5f6g Updated variables
+h7i8j9k Initial commit
+
+7. Create a Branch
+git branch feature-login
+Meaning: Creates a new branch.
+Create and switch to it:
+git checkout -b feature-login
+Modern command:
+git switch -c feature-login
+8. Switch Branch
+Old command:
+git checkout main
+Modern command:
+git switch main
+Meaning: Moves you from one branch to another.
+
+9. List Branches
+git branch
+Meaning: Shows local branches.
+To see remote branches:
+git branch -r
+All branches:
+git branch -a
+
+10. Delete a Branch
+git branch -d feature-login
+Meaning: Deletes a local branch after it has been merged.
+Force delete:
+git branch -D feature-login
+
+11. Connect to Remote Repository
+Check remote:
+git remote -v
+Add remote:
+git remote add origin <repository-url>
+Meaning: Connects your local repository to GitHub/GitLab/Bitbucket.
+
+12. Git Push
+git push origin main
+Meaning: Uploads your local commits to the remote repository.
+For a new branch:
+git push -u origin feature-login
+
+13. Git Fetch
+git fetch origin
+Meaning: Downloads the latest information from the remote repository without automatically merging it into your current branch.
+Easy way:
+Fetch = Download and review.
+
+14. Git Pull
+git pull origin main
+Meaning: Gets changes from the remote repository and integrates them into your current branch.
+Easy way:
+Pull = Fetch + integrate.
+
+15. Git Merge
+git checkout main
+git merge feature-login
+Meaning: Combines the changes from feature-login into main.
+Easy way:
+Merge = Combine branches.
+
+16. Git Rebase
+git checkout feature-login
+git rebase main
+Meaning: Replays your feature-branch commits on top of the latest main commits.
+Used to maintain a cleaner, linear history.
+
+17. Git Diff
+git diff
+Meaning: Shows changes that are in your working directory but haven't been staged.
+Staged changes:
+git diff --staged
+
+18. Git Stash
+git stash
+Meaning: Temporarily saves your uncommitted changes.
+Later:
+git stash pop
+Meaning: Restores the stashed changes.
+View stashes:
+git stash list
+Easy way:
+Stash = Temporarily keep unfinished work aside.
+
+19. Git Reset
+Unstage a file:
+git reset filename
+Meaning: Removes the file from the staging area but keeps your changes.
+
+20. Git Restore
+Discard changes in a file:
+git restore filename
+Meaning: Removes your uncommitted changes from that file and restores the last committed version.
+⚠️ Be careful because your uncommitted changes can be lost.
+
+21. Git RM
+git rm filename
+Meaning: Removes the file from your working directory and Git tracking.
+To stop tracking but keep the file:
+git rm --cached filename
+This is commonly used with .gitignore.
+
+22. .gitignore
+Create:
+.gitignore
+Example:
+.terraform/
+*.tfstate
+.env
+*.log
+Meaning: Tells Git which files/directories should not be tracked.
+
+23. Git Cherry-pick
+git cherry-pick <commit-id>
+Meaning: Takes one specific commit from another branch and applies it to your current branch.
+Example:
+feature branch
+      |
+      D  ← bug fix
+      |
+      ↓
+cherry-pick D
+      |
+      ↓
+main
+Easy way:
+Cherry-pick = Bring only a specific commit.
+
+24. Git Squash
+Usually:
+git rebase -i HEAD~3
+Then change:
+pick   Commit-1
+pick   Commit-2
+pick   Commit-3
+to:
+pick   Commit-1
+squash Commit-2
+squash Commit-3
+Meaning: Combines multiple commits into one commit.
+Easy way:
+Squash = Combine commits.
+
+25. Git Tag
+git tag v1.0.0
+Meaning: Creates a tag for a specific commit, commonly used for releases.
+Push tag:
+git push origin v1.0.0
+
+26. Git Show
+git show <commit-id>
+Meaning: Shows the details and changes introduced by a particular commit.
+
+27. Git Revert
+git revert <commit-id>
+Meaning: Creates a new commit that reverses the changes from an earlier commit.
+This is generally safer than resetting commits that have already been pushed and shared.
+Complete Git Workflow
+This is the flow you should remember for interviews:
+              Remote Repository
+                     ↑
+                  git push
+                     |
+              Local Repository
+                     ↑
+                git commit
+                     |
+                Staging Area
+                     ↑
+                  git add
+                     |
+              Working Directory
+
+A practical workflow:
+=====================
+
+git clone <repo-url>
+
+git checkout -b feature-login
+
+# Make your changes
+
+git status
+
+git add .
+
+git diff --staged
+
+git commit -m "Added login feature"
+
+git fetch origin
+
+git rebase origin/main
+
+git push -u origin feature-login
+
+Then create a Pull Request/Merge Request, get the code reviewed, and merge the feature into the appropriate branch.
+
+Most important commands for a DevOps interview
+If you want to memorize only the important ones first:
+
+git clone       → Download repository
+git init        → Create repository
+git status      → Check changes
+git add         → Stage changes
+git commit      → Save changes locally
+git log         → View history
+git branch      → Manage branches
+git checkout    → Switch branch
+git switch      → Switch branch
+git fetch       → Download remote changes
+git pull        → Download + integrate
+git push        → Upload commits
+git merge       → Combine branches
+git rebase      → Replay commits / linear history
+git stash       → Temporarily save changes
+git cherry-pick → Apply specific commit
+git revert      → Reverse a commit with a new commit
+git reset       → Move/reset HEAD or unstage changes
+git diff        → See changes
+git tag         → Mark a release
+
+Interview shortcut:
+“The basic Git flow is: modify → git status → git add → git commit → git push. When working with a team, we use branches, fetch/pull, merge or rebase, and pull requests for code review.”
